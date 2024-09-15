@@ -9,14 +9,13 @@ mysql:
 db name - cheat
 and upload db.sql file
 
-to do list:
-- viewing invites as user
-maybe:
+to do list (maybe):
 - add comments to profile
 
 added:
 - landing page
 - discord linking
+- viewing invites as user
 - faq
 - other user profiles
 - replaced website.cc with localhost
