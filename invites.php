@@ -6,9 +6,13 @@ $user = new UserController;
 
 Session::init();
 
-if (!Session::isLogged()) { 
-    Util::redirect('/login.php'); 
+if (!Session::isLogged()) {
+    Util::redirect('/login.php');
 }
+
+$username = Session::get('username');
+
+$invites = $user->getInvitesByUser($username);
 
 ?>
 
@@ -61,9 +65,29 @@ if (!Session::isLogged()) {
     <div class="main">
         <div class="panel-card" style="min-height: 125px">
             <div class="header">
-                <span>invites</span>
-                
-                
+                <span>Invites</span>
+            </div>
+            <div class="content">
+                <?php if (empty($invites)): ?>
+                    <p>No invites found.</p>
+                <?php else: ?>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Invite Code</th>
+                                <th>Date Created</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($invites as $invite): ?>
+                                <tr>
+                                    <td><?php echo htmlspecialchars($invite->code); ?></td>
+                                    <td><?php echo htmlspecialchars($invite->createdAt); ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -76,5 +100,5 @@ if (!Session::isLogged()) {
         <a href="./" class="panel-link">panel</a>
     </div>
 
-<iframe name="__privateStripeMetricsController1540" frameborder="0" allowtransparency="true" scrolling="no" allow="payment *" src="./files/m-outer-fd3c67f2efa9f22f2ecd16b13f2a7fb3.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body>
+</body>
 </html>
