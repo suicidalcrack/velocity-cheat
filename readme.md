@@ -9,7 +9,9 @@ mysql:
 db name - cheat
 and upload db.sql file
 
-to do list (maybe):
+to do list:
+- rework htaccess rewriteengine to delete all .php extensions
+maybe:
 - add comments to profile
 
 added:
