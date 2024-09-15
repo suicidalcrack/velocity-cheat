@@ -9,10 +9,11 @@ mysql:
 db name - cheat
 and upload db.sql file
 
-to do list:
-- rework htaccess rewriteengine to delete all .php extensions
-maybe:
-- add comments to profile
+to do list (diy):
+- redirect every link without .php extension
+
+reworked:
+- htaccess file to remove all .php extensions
 
 added:
 - landing page
