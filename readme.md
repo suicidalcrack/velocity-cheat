@@ -9,11 +9,9 @@ mysql:
 db name - cheat
 and upload db.sql file
 
-to do list (diy):
-- redirect every link without .php extension
-
 reworked:
 - htaccess file to remove all .php extensions
+- redirect every link without .php extension
 
 added:
 - landing page
