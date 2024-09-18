@@ -7,7 +7,7 @@ $user = new UserController;
 Session::init();
 
 if (!Session::isLogged()) {
-    Util::redirect('/login.php');
+    Util::redirect('/login');
 }
 
 $username = Session::get('username');
@@ -93,7 +93,7 @@ $invites = $user->getInvitesByUser($username);
     </div>
 
     <div class="controls">
-        <a href="/logout.php">log out</a>
+        <a href="/logout">log out</a>
     </div>
 
     <div class="user-controls">

@@ -6,8 +6,8 @@ $user = new UserController;
 
 Session::init();
 
-if (!Session::isLogged()) { Util::redirect('/login.php'); }
-if (!Session::isBanned()) { Util::redirect('/index.php'); }
+if (!Session::isLogged()) { Util::redirect('/login'); }
+if (!Session::isBanned()) { Util::redirect('/index'); }
 
 $username = Session::get("username");
 

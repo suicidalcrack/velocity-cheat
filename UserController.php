@@ -122,7 +122,7 @@ class UserController extends Users {
 			// Session start
 			if ($result) {
 
-				Util::redirect('/login.php');
+				Util::redirect('/login');
 
 			} else {
 
@@ -260,7 +260,7 @@ class UserController extends Users {
 
 			if ($result) {
 
-				Util::redirect('/logout.php');
+				Util::redirect('/logout');
 
 			} else {
 

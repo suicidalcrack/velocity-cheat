@@ -22,6 +22,12 @@ class UserController extends Users {
 
 	}
 
+	public function getInvitesByUser($username) {
+		$this->prepare('SELECT * FROM `invites` WHERE `createdBy` = ?');
+		$this->statement->execute([$username]);
+		return $this->statement->fetchAll();
+	}		
+
 
 	public function logoutUser() {
 
@@ -116,7 +122,7 @@ class UserController extends Users {
 			// Session start
 			if ($result) {
 
-				Util::redirect('/login.php');
+				Util::redirect('/login');
 
 			} else {
 
@@ -254,7 +260,7 @@ class UserController extends Users {
 
 			if ($result) {
 
-				Util::redirect('/logout.php');
+				Util::redirect('/logout');
 
 			} else {
 
@@ -285,7 +291,6 @@ class UserController extends Users {
 	public function getNewUser() {
 		return $this->newUser();
 	}
-
 
 	public function getSubStatus() {
 		

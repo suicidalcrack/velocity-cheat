@@ -31,7 +31,7 @@ if ($user_data['sub'] === null && strtotime($user_data['createdAt']) < strtotime
   $stmt = mysqli_prepare($conn, $query);
   mysqli_stmt_bind_param($stmt, "i", $user_data['uid']);
   mysqli_stmt_execute($stmt);
-  header('Location: index.php');
+  header('Location: index');
   exit;
 }
 
@@ -92,10 +92,10 @@ $admin = $user_data['admin'];
         </div>
     </div>
     <div class="controls">
-        <a href="/logout.php">log out</a>
+        <a href="/logout">log out</a>
     </div>
     <div class="user-controls">
-        <a href="../index.php" class="panel-link">panel</a>
+        <a href="../index" class="panel-link">panel</a>
     </div>
 
     <script>

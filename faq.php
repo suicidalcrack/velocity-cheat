@@ -42,7 +42,7 @@
 </div>
 </div>
 <div class="controls">
-<a href="/logout.php">log out</a>
+<a href="/logout">log out</a>
 </div>
 <div class="user-controls">
     <a href="./" class="panel-link">panel</a>

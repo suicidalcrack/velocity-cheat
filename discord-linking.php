@@ -7,7 +7,7 @@ $user = new UserController;
 Session::init();
 
 if (!Session::isLogged()) { 
-    Util::redirect('/login.php'); 
+    Util::redirect('/login'); 
 }
 
 if (isset($_GET['code'])) {
@@ -23,7 +23,7 @@ if (isset($_GET['code'])) {
                 'client_secret' => 'puturbotclientsecret',
                 'grant_type' => 'authorization_code',
                 'code' => $code,
-                'redirect_uri' => 'http://localhost/discord-linking.php',
+                'redirect_uri' => 'http://localhost/discord-linking',
             ]),
         ],
     ]));
@@ -70,7 +70,7 @@ if (isset($_GET['code'])) {
     }
 
     // Przekieruj użytkownika na stronę bez kodu w URL
-    header("Location: http://localhost/discord-linking.php");
+    header("Location: http://localhost/discord-linking");
     exit();
 }
 
@@ -175,7 +175,7 @@ Util::banCheck();
     </div>
 
     <div class="controls">
-        <a href="/logout.php">log out</a>
+        <a href="/logout">log out</a>
     </div>
 
     <div class="user-controls">

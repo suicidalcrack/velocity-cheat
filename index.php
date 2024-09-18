@@ -79,24 +79,24 @@ Util::banCheck();
     ?>
 </span>
 <br>
-                    <a href="/purchase.php">extend</a><br>
+                    <a href="/purchase">extend</a><br>
                     <br>
                     <span>client</span><br>
-                    <a href="/download.php">download loader</a><br>
+                    <a href="/download">download loader</a><br>
                 </div>
                 <div class="separator">
                     <br>
                     <span>discord</span><br>
                     <a href="https://discord.gg/FrdhPSEj7D">discord server</a><br>
-                    <a href="discord-linking.php">link account</a><br>
+                    <a href="discord-linking">link account</a><br>
                     <br>
                     <span>information</span><br>
-                    <a href="/faq.php">frequently asked questions</a><br>
+                    <a href="/faq">frequently asked questions</a><br>
                     <br>
                 </div>
             </div>
             <span>management</span><br>
-            <a href="invites.php">invites</a>
+            <a href="invites">invites</a>
             <?php if (Session::isAdmin()) : ?>
                 <br>
                 <a class="nav-link" href="<?= SUB_DIR ?>/admin">admin panel</a>
@@ -109,7 +109,7 @@ Util::banCheck();
         <span>newest user: <a href="/profile/<?php Util::display($user->getNewUser()) ?>" style="color: rgb(255, 255, 255);"><?php Util::display($user->getNewUser()); ?></a></span><br>
     </div>
     <div class="controls">
-        <a href="/logout.php">log out</a>
+        <a href="/logout">log out</a>
     </div>
     <div class="user-controls">
         <a href="/#" class="panel-link">panel</a>
